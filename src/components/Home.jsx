@@ -7,7 +7,7 @@ const Home = () => {
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-center h-full">
         <div className="flex lg:text-10xl md:text-8xl sm:text-6xl text-5xl font-black text-gray-900 mx-auto">
           <div className='flex'>
-            <div className="text-yellow-500">Le</div>
+            <div className="text-yellow-400">Le</div>
             andro&nbsp;
           </div>
           <div className='flex'>
