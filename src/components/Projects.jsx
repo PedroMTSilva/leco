@@ -1,6 +1,21 @@
 import React from 'react'
+import axios from 'axios'
 
 const Projects = () => {
+  class ReposList extends React.Component {
+    state = {
+      repos: []
+    }
+  
+    componentDidMount() {
+      axios.get(`https://api.github.com/users/leandroc0rreia/repos`)
+        .then(res => {
+          const rep = res.data;
+          this.setState({ rep });
+        })
+    }
+    
+  }
   return (
     <div name='projects' className="w-full px-16 mb-16 pt-[10%]">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
@@ -12,8 +27,11 @@ const Projects = () => {
           <div className='basis-1/5'></div>
         </div>
       </div>
+      {/* Github Rest API */}
+      
     </div>
   )
 }
+
 
 export default Projects

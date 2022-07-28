@@ -125,7 +125,7 @@ function MyTabs() {
       },
       {
         id: 6,
-        title: 'Resolver Problemas',
+        title: 'Pragmático',
         progress: "75%",
       },
       {
@@ -135,7 +135,7 @@ function MyTabs() {
       },
       {
         id: 8,
-        title: 'Focado no Objetivo',
+        title: 'Focado',
         progress: "73%",
       },
     ],
