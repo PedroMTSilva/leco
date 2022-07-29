@@ -6,7 +6,7 @@ import Pdf from '../cvPortugues.pdf'
 
 const About = () => {
   return (
-    <div name='about' className="w-full px-16 pt-[10%] mb-16">
+    <div name='about' className="w-full px-8 pt-[10%] mb-16">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
         {/* Image + Title + Text */}
         <div className="max-w-[1000px] w-full px-4 flex flex-row gap-2 mb-16">
@@ -26,7 +26,7 @@ const About = () => {
           </div>
         </div>
         {/* Technical/Soft Skills */}
-        <div className="max-w-[1000px] w-full px-4 mb-10">
+        <div className="max-w-[1000px] w-full px-8 mb-10">
           <MyTabs />
         </div>
         {/* Curriculum Button */}
@@ -107,6 +107,7 @@ function MyTabs() {
         id: 2,
         title: 'Adaptável',
         progress: "90%",
+              
       },
       {
         id: 3,
@@ -193,5 +194,5 @@ function MyTabs() {
   )
 }
 
-export default About
+export default About      
 

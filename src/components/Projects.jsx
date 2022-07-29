@@ -12,7 +12,7 @@ const Projects = () => {
     .then(data => setRepositories(data))
   }, [])
   return (
-    <div name='projects' className="w-full px-16 mb-16 pt-[10%]">
+    <div name='projects' className="w-full px-8 mb-16 pt-[10%]">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
         <div className='flex flex-col justify-center items-center'>
           <div className='basis-1/5'></div>
@@ -23,8 +23,8 @@ const Projects = () => {
         </div>
       </div>
       {/* Github Rest API */}
-      <div className='w-full lg:px-32 md:px-16 px-8 mt-16'>
-        <div className="grid lg:grid-cols-2 grid-cols-1 justify-center gap-8">
+      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-center h-full mt-16'>
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
           {repositories.map((repository) => {
             let newDate = new Date(repository.updated_at)
             let updateDate_at = newDate.toLocaleDateString()
@@ -35,6 +35,7 @@ const Projects = () => {
                   <div className="text-black text-lg text-left font-light pl-4 pt-6">{repository.description}</div>
                   <div className="pl-4 pt-6 mb-4 flex">
                     <div className="text-black text-xs text-left font-bold">Linguagens: </div>
+                    {/* TODO: multiple languages */}
                     <div className="text-left text-xs pl-1">{repository.language}</div>
                   </div>
                   <div className="flex">
@@ -46,7 +47,7 @@ const Projects = () => {
                       <div className="text-black text-xs text-left font-light mr-1"><small>Atualizado em {updateDate_at}</small></div>
                     </div>
                   </div>
-                  <hr className='pl-4'/>
+                  <hr className='mb-4'/>
                   <div className="grid grid-cols-2 gap-3 mt-4">
                     <button className='border-2 border-blue-50 rounded-md bg-blue-500 text-white p-2'>
                       <a href={repository.svn_url+"/archives/master.zip"} className='flex items-center justify-center'>

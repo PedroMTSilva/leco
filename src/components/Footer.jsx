@@ -2,10 +2,10 @@ import React from 'react'
 
 function Footer() {
   return (
-      <div className="mt-auto py-7 text-center mx-auto">
+      <div className="mt-auto py-4 text-center mx-auto bg-gray-100">
         <div className="container mx-auto lg:px-16 md:px-14 sm:px-12 px-10">
           <div className='lg:mx-12'>
-            <p className='lead pb-3 justify-center mx-auto text-md text-center text-blue-600 hover:text-blue-900'>
+            <p className='lead justify-center mx-auto text-md text-center text-blue-600 hover:text-blue-900'>
               Design e Código feito por Leandro Correia
             </p>
             <p>
