@@ -9,6 +9,7 @@ function Footer() {
               Design e Código feito por Leandro Correia
             </p>
             <p>
+              {/* TODO: icon do CODE by Leandro Correia */}
               <small className="text-muted text-gray-600">O projeto é open-source. Esteja à vontade para contribuir ou fazer a sua própria versão.</small>
             </p>
           </div>

@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import 'flowbite';
 import { Tab } from '@headlessui/react'
-import Pdf from '../cvPortugues.pdf'
+import Photo from '../info/leandrocorreia.png'
+import Pdf from '../info/resume.pdf'
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
         {/* Image + Title + Text */}
         <div className="max-w-[1000px] w-full px-4 flex flex-row gap-2 mb-16">
           <div className='lg:block hidden basis-2/5'>
-            <img className="rounded-full" src='LeandroCorreia.png' alt="profilepicture" width="350" height="350"></img>
+            <img className="rounded-full" src={Photo} alt="profilepicture" width="350" height="350"></img>
           </div>
           {/* Title + Text */}
           <div className='basis-5/5 lg:basis-3/5'>

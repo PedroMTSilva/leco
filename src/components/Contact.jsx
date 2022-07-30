@@ -1,6 +1,47 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
+import emailjs from '@emailjs/browser';
+import $ from 'jquery';
+
+const smtp_service = process.env.REACT_APP_SMTP_SERVICE
+const smtp_template = process.env.REACT_APP_SMTP_TEMPLATE
+const smtp_publicId = process.env.REACT_APP_SMTP_PUBLIC_ID
 
 const Contact = () => {
+  const form = useRef();
+
+  function sendEmail(e) {
+    e.preventDefault();
+    let email = document.getElementById("email").value
+    let message = document.getElementById("message").value
+    let emailPattern = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+    if (email.match(emailPattern) && message!="") {
+      emailjs.sendForm(smtp_service, smtp_template, form.current, smtp_publicId)
+        .then((result) => {
+            // console.log(result.text);
+        }, (error) => {
+            // console.log(error.text);
+        });
+        e.target.reset()
+    } else {
+      if (!email.match(emailPattern)) {
+        $("#email").removeClass("bg-gray-50 border border-gray-300")
+        $("#email").addClass("bg-red-50 border border-red-300")
+      }
+      if (message=="") {
+        $("#message").removeClass("bg-gray-50 border border-gray-300")
+        $("#message").addClass("bg-red-50 border border-red-300")
+      }
+    }
+    $("#email").on("focus",function() {
+      $("#email").removeClass("bg-red-50 border border-red-300")
+      $("#email").addClass("bg-gray-50 border border-gray-300")
+    })
+    $("#message").on("focus",function() {
+      $("#message").removeClass("bg-red-50 border border-red-300")
+      $("#message").addClass("bg-gray-50 border border-gray-300")
+    })
+  }
+  
   return (
     <div name='contact' className="w-full px-8 mb-32 pt-[10%]">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
@@ -14,38 +55,44 @@ const Contact = () => {
         <div className='flex flex-col justify-center items-center mt-8'>
           <div className='basis-1/5'></div>
           <div className='basis-3/5'>
-            <p className='lg:text-xl md:text-xl sm:text-lg text-md font-medium text-center'>Se tiveres alguma questão ou quiseres falar comigo, esteja à vontade para contactar-me a qualquer altura.</p>
+            <p className='lg:text-xl md:text-xl sm:text-lg text-md font-medium text-center'>Se tiver alguma questão ou quiser falar comigo, esteja à vontade para contactar-me a qualquer altura.</p>
+            <p className='lg:text-lg md:text-lg sm:text-md text-sm font-medium text-center'></p>
           </div>
           <div className='basis-1/5'></div>
         </div>
-        {/* Send message */}
-        
+        {/* TODO: Send message */}
         <div className="max-w-[1000px] w-full px-8 mt-16">
           <div className="bg-white text-black rounded-md shadow-md p-4 text-left">
-            <div className="relative p-2">
-              <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Email:</label>
-              <div className="flex absolute inset-y-0 left-0 items-center pl-5 pt-7 pointer-events-none">
-                <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="relative p-2">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Email:</label>
+                <div className="flex absolute inset-y-0 left-0 items-center pl-5 pt-7 pointer-events-none">
+                  <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                </div>
+                <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="exemplo@leandroc0rreia.com" name='email' id='email'/>
               </div>
-              <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="exemplo@leandroc0rreia.com"/>
-            </div>
-            <div className="p-2">
-              <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mensagem:</label>
-              <textarea rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sua mensagem..."></textarea>
-            </div>
-            <div className="flex justify-end mt-2">
-              <button className='border-2 border-blue-50 rounded-md bg-blue-500 hover:bg-blue-600 duration-100 text-white p-3'>
-                <a className='flex items-center justify-center'>
-                  <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
-                  <span>Enviar mensagem</span>
-                </a>
-              </button>
-            </div>
+              <div className="p-2">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Mensagem:</label>
+                <textarea rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Sua mensagem..." name='message' id='message'></textarea>
+              </div>
+              <div className="flex justify-end mt-2">
+                <button type='submit' className='border-2 border-blue-50 rounded-md bg-blue-500 hover:bg-blue-600 duration-100 text-white p-3' data-modal-toggle="popup-modal">
+                  <div className='flex items-center justify-center'>
+                    <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg>
+                    <span>Enviar mensagem</span>
+                  </div>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
+      {/* Main modal */}
+      
     </div>
   )
 }
+
+
 
 export default Contact

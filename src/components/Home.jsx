@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaFacebook, FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa'
+import {FaAddressCard, FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaSdCard} from 'react-icons/fa'
 
 const Home = () => {
   return (
@@ -27,6 +27,7 @@ const Home = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-600 p-4 rounded-l-2xl'><a className='flex' href="https://www.facebook.com/leandroc0rreia"><FaFacebook size={24} className={"mr-4"}/>Facebook</a></li>
           <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-rose-600 p-4 rounded-l-2xl'><a className='flex' href="https://www.instagram.com/leandroc0rreia"><FaInstagram size={24} className={"mr-4"}/>Instagram</a></li>
           <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-700 p-4 rounded-l-2xl'><a className='flex' href="https://www.linkedin.com/in/leandroc0rreia"><FaLinkedin size={24} className={"mr-4"}/>LinkedIn</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-gray-500 p-4 rounded-l-2xl'><a className='flex' href="mailto:geral@gmail.com"><FaEnvelope size={24} className={"mr-4"}/>E-mail</a></li>
         </ul>
       </div>
     </div>
