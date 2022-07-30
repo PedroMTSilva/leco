@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaAddressCard, FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaSdCard} from 'react-icons/fa'
+import {FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
 const Home = () => {
   return (
