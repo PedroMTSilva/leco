@@ -11,23 +11,23 @@ function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
               <div className="flex-shrink-0">
-                <a className="flex items-center">
+                <div className="flex items-center">
                     <img src="../logo.png" className="mr-3 h-6 sm:h-9" alt="LECO logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-black">Leandro Correia</span>
-                </a>
+                </div>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
+                  <Link to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
                     Home
                   </Link>
-                  <Link to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
+                  <Link to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
                     Sobre
                   </Link>
-                  <Link to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
+                  <Link to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
                     Projetos
                   </Link>
-                  <Link to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
+                  <Link to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-800 px-3 py-2 rounded-md text-sm font-medium">
                     Contacto
                   </Link>
                 </div>
@@ -90,16 +90,16 @@ function Navbar() {
           leaveTo="opacity-0 scale-95">
           {<div className="md:hidden" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <Link onClick={() => setIsOpen(!isOpen)} to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
+                <Link onClick={() => setIsOpen(!isOpen)} to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
                   Home
                 </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
+                <Link onClick={() => setIsOpen(!isOpen)} to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
                   Sobre
                 </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
+                <Link onClick={() => setIsOpen(!isOpen)} to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
                   Projetos
                 </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 text-black hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
+                <Link onClick={() => setIsOpen(!isOpen)} to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium">
                   Contacto
                 </Link>
               </div>
