@@ -36,8 +36,8 @@ body {
 html.dark {
   --page-background: black;
 
-  --scrollbar-thumb: salmon;
-  --scrollbar-thumb-hover: chocolate;
+  --scrollbar-thumb: rgb(239, 160, 0);
+  --scrollbar-thumb-hover: rgb(236, 160, 8);
 }
 /* Dark theme */
 
