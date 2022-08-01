@@ -26,8 +26,6 @@ const Projects = () => {
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-center h-full mt-16'>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
           {repositories.map((repository) => {
-            let newDate = new Date(repository.updated_at)
-            let updateDate_at = newDate.toLocaleDateString()
             return(
               <>
                 <div className="bg-white hover:bg-gray-50 text-black rounded-md shadow-md p-4">
@@ -44,7 +42,7 @@ const Projects = () => {
                       <div className="text-left text-xs bg-gray-900 text-white text-center p-0.5 rounded-lg">{repository.stargazers_count}</div>
                     </div>
                     <div className="pl-4 mb-4 flex items-center">
-                      <div className="text-black text-xs text-left font-light mr-1"><small>Atualizado em {updateDate_at}</small></div>
+                      <div className="text-black text-xs text-left font-light mr-1"><small>Atualizado em {new Date(repository.pushed_at).toLocaleDateString()}</small></div>
                     </div>
                   </div>
                   <hr className='mb-4'/>
