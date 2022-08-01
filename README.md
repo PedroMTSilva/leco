@@ -130,3 +130,7 @@ npm run deploy
 ## Notice
 
 This project is in development. Means that feel free to help and give suggestions. Feel free to fork, use and maintain your own version.
+
+## License ⚖️
+
+Distributed under the `GPL-3.0` License. See [LICENSE](LICENSE.md) for more information.
