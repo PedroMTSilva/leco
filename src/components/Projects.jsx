@@ -50,7 +50,7 @@ const Projects = () => {
                   <hr className='mb-4'/>
                   <div className="grid grid-cols-2 gap-3 mt-4">
                     <button className='border-2 border-blue-50 rounded-md bg-blue-500 text-white p-2'>
-                      <a href={repository.svn_url+"/archives/master.zip"} className='flex items-center justify-center'>
+                      <a href={repository.svn_url+"/archive/refs/tags/v1.0.zip"} className='flex items-center justify-center'>
                         <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 8h-2v2h-2v-4h4v2zm8 16v-2h-6v2h6zm2-16h2v2h2v-4h-4v2zm2 12v2h-2v2h4v-4h-2zm-12 2h-2v-2h-2v4h4v-2zm14-10h-2v6h2v-6zm-16 6v-6h-2v4h-4v-14h14v4h-4v2h6v-8h-18v18h8z"/></svg>
                         <span>Clonar projeto</span>
                       </a>
