@@ -21,7 +21,7 @@ const Home = () => {
         </div>
       </div>
       {/* Social Media */}
-      <div className="hidden md:flex flex-col fixed right-0 top-[35%]">
+      <div className="hidden md:flex flex-col fixed right-0 top-[35%] z-10">
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-slate-900 p-4 rounded-l-2xl'><a className='flex' href="https://www.github.com/leandroc0rreia"><FaGithub size={24} className={"mr-4"}/>Github</a></li>
           <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-600 p-4 rounded-l-2xl'><a className='flex' href="https://www.facebook.com/leandroc0rreia"><FaFacebook size={24} className={"mr-4"}/>Facebook</a></li>
