@@ -128,3 +128,6 @@ yarn-error.log*
 
 #obsidian
 .obsidian
+
+#vscode
+.vscode
