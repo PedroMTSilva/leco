@@ -127,7 +127,7 @@ npm run deploy
 - Take a screenshot of your version and rename it "social-image.png" and place it there.
 
 
-## Notice
+## Contributing 🙋
 
 This project is in development. Means that feel free to help and give suggestions. Feel free to fork, use and maintain your own version.
 
