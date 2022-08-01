@@ -127,7 +127,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #obsidian
-.obsidian
+/.obsidian
 
 #vscode
-.vscode
+/.vscode
