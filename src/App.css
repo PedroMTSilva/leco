@@ -12,58 +12,10 @@
 }
 
 body {
-  background: #33CCCC; /* Fallback */
+  background: white; /* Fallback */
   animation: color 9s infinite linear;
   text-align: center;
   padding: 2em;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Default (light) theme */
-:root {
-  --page-background: white;
-
-  --scrollbar-track: transparent;
-  --scrollbar-thumb: rgb(66, 46, 243);
-  --scrollbar-thumb-hover: rgb(60, 41, 223);
-
-  --scrollbar-width: 12px;
-}
-/* Default (light) theme */
-
-/* Dark theme */
-html.dark {
-  --page-background: black;
-
-  --scrollbar-thumb: rgb(239, 160, 0);
-  --scrollbar-thumb-hover: rgb(236, 160, 8);
-}
-/* Dark theme */
-
-/* Firefox */
-* {
-  scrollbar-width: thick; /* none | auto  */
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
-/* Firefox */
-
-/* Chrome, Edge, Safari */
-*::-webkit-scrollbar {
-  width: var(--scrollbar-width); /* vertical scrollbar */
-  height: var(--scrollbar-width); /* horizontal scrollbar */
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: var(--scrollbar-width);
-  border: calc(var(--scrollbar-width) / 4) solid var(--page-background);
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
 }

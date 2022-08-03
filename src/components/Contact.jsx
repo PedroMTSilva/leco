@@ -86,8 +86,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/* Main modal */}
-      
     </div>
   )
 }
