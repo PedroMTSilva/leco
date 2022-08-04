@@ -1,8 +1,30 @@
-{
+{   
     "firstName": "Leandro",
     "lastName": "Correia",
     "fullName": "Leandro Correia",
     "url": "https://leandroc0rreia.com",
+    "social_media": {
+        "github": {
+            "text": "Github",
+            "url": "https://www.github.com/leandroc0rreia"
+        },
+        "facebook": {
+            "text": "Facebook",
+            "url": "https://www.facebook.com/leandroc0rreia"
+        },
+        "instagram": {
+            "text": "Instagram",
+            "url": "https://www.instagram.com/leandroc0rreia"
+        },
+        "linkedin": {
+            "text": "Linkedin",
+            "url": "https://www.linkedin.com/in/leandroc0rreia"
+        },
+        "email": {
+            "text": "E-mail",
+            "url": "mailto:geral@leandroc0rreia.com"
+        }
+    },
     "resume_path": "resume.pdf",
     "profile_pic": "leandrocorreia.png",
     "logo": "logo.png",

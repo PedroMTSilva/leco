@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Repo from '../api/getGithubRepo'
 import data from '../config.json'
 
 const username = process.env.REACT_APP_GITHUB_USER
@@ -6,6 +7,7 @@ const API = `https://api.github.com/users/${username}/repos`;
 const projectData = data.pt.projects
 
 const Projects = () => {
+  
   const [repositories, setRepositories] = useState([])
   useEffect(() => {
     fetch(API)

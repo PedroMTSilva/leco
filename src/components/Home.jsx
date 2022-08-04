@@ -3,7 +3,7 @@ import {FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin} from 'react-i
 import data from '../config.json'
 
 const homeData = data.pt.home
-const socialMedia = {"github": "Github", "facebook": "Facebook", "instagram": "Instagram", "linkedin": "Linkedin", "email": "Email"}
+const socialMedia = data.social_media
 
 const Home = () => {
   return (
@@ -27,11 +27,11 @@ const Home = () => {
       {/* Social Media */}
       <div className="hidden md:flex flex-col fixed right-0 top-[35%] z-10">
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-warm-gray-900 dark:bg-warm-gray-700 p-4 rounded-l-2xl'><a className='flex' href="https://www.github.com/leandroc0rreia"><FaGithub size={24} className={"mr-4"}/>{socialMedia.github}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-600 p-4 rounded-l-2xl'><a className='flex' href="https://www.facebook.com/leandroc0rreia"><FaFacebook size={24} className={"mr-4"}/>{socialMedia.facebook}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-red-600 p-4 rounded-l-2xl'><a className='flex' href="https://www.instagram.com/leandroc0rreia"><FaInstagram size={24} className={"mr-4"}/>{socialMedia.instagram}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-700 p-4 rounded-l-2xl'><a className='flex' href="https://www.linkedin.com/in/leandroc0rreia"><FaLinkedin size={24} className={"mr-4"}/>{socialMedia.linkedin}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-gray-500 p-4 rounded-l-2xl'><a className='flex' href="mailto:geral@leandroc0rreia.com"><FaEnvelope size={24} className={"mr-4"}/>E-{socialMedia.email}</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-warm-gray-900 dark:bg-warm-gray-700 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.github.url}><FaGithub size={24} className={"mr-4"}/>{socialMedia.github.text}</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-600 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.facebook.url}><FaFacebook size={24} className={"mr-4"}/>{socialMedia.facebook.text}</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-red-600 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.instagram.url}><FaInstagram size={24} className={"mr-4"}/>{socialMedia.instagram.text}</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-700 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.linkedin.url}><FaLinkedin size={24} className={"mr-4"}/>{socialMedia.linkedin.text}</a></li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-gray-500 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.email.url}><FaEnvelope size={24} className={"mr-4"}/>E-{socialMedia.email.text}</a></li>
         </ul>
       </div>
     </div>

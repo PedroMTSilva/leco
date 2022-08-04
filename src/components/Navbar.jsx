@@ -2,38 +2,14 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
 import {FaSun, FaMoon} from 'react-icons/fa'
-import $ from 'jquery'
 import data from '../config.json'
+import useDarkMode from "../hook/useDarkMode";
 
-const userTheme = localStorage.getItem("theme")
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
 const navData = data.pt.navbar
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const themeCheck = () => {
-    if(userTheme === "dark" || (!userTheme && systemTheme)){
-      $('html').addClass("dark")
-      return
-    }
-  }
-
-  const themeSwitch = () => {
-    if($('html').hasClass("dark")){
-      $('html').removeClass("dark")
-      localStorage.setItem("theme", "light")
-      $("#moon").removeClass("hidden")
-      $("#sun").addClass("hidden")
-      return
-    }
-    $('html').addClass("dark")
-    localStorage.setItem("theme", "dark")
-    $("#moon").addClass("hidden")
-    $("#sun").removeClass("hidden")
-  }
-
-  themeCheck()
+  const [colorTheme, setTheme] = useDarkMode();
   
   return (
     <div className="fixed w-full h-16 z-10">
@@ -49,10 +25,8 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-center space-x-4">
-                  <button id="theme-toggle" onClick={themeSwitch} className="bg-white hover:bg-blue-50 text-black hover:text-blue-800 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 p-2 rounded-md">
-                    {/* TODO: figured out, how to use USESTATES :/ */}
-                    <FaSun id="sun" className="hidden" size={24} />
-                    <FaMoon id="moon" className="hidden" size={24} />
+                  <button id="theme-toggle" onClick={() => setTheme(colorTheme)} className="bg-white hover:bg-blue-50 text-black hover:text-blue-800 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 p-2 rounded-md">
+                    { (colorTheme === "light") ? (<FaSun id="sun" size={24} />) : (<FaMoon id="moon" size={24} />) }
                   </button>
                   <Link to="home" smooth={true} duration={500} className="text-black hover:bg-blue-50 hover:text-blue-800 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 px-3 py-2 rounded-md text-sm font-medium">
                     {navData.homepage}
