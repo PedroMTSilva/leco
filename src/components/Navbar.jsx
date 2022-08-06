@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
-import {FaSun, FaMoon} from 'react-icons/fa'
+import {FaSun, FaMoon, FaBars, FaTimes} from 'react-icons/fa'
 import data from '../config.json'
-import useDarkMode from "../hook/useDarkMode";
+import useDarkMode from "../services/changeTheme";
 
 const navData = data.pt.navbar
 
@@ -44,6 +44,16 @@ const Navbar = () => {
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
+              <button 
+                id="theme-toggle" 
+                onClick={() => setTheme(colorTheme)} 
+                className="bg-white hover:bg-blue-50 text-black hover:text-blue-800 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 p-2 rounded-md mr-4">
+                { 
+                  (colorTheme === "light") 
+                  ? (<FaSun id="sun" size={24} />) 
+                  : (<FaMoon id="moon" size={24} />) 
+                }
+              </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -52,39 +62,11 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
-                {!isOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
+                {
+                  (!isOpen) 
+                  ? (<FaBars className="block h-6 w-6" size={10} />) 
+                  : (<FaTimes className="block h-6 w-6" size={10} />)
+                }
               </button>
             </div>
           </div>
@@ -98,22 +80,26 @@ const Navbar = () => {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95">
-          {<div className="md:hidden" id="mobile-menu">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <Link onClick={() => setIsOpen(!isOpen)} to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
-                  {navData.homepage}
-                </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
-                  {navData.about}
-                </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
-                 {navData.projects}
-                </Link>
-                <Link onClick={() => setIsOpen(!isOpen)} to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
-                  {navData.contact}
-                </Link>
+          {
+            <>
+              <div className="md:hidden" id="mobile-menu">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                  <Link onClick={() => setIsOpen(!isOpen)} to="home" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
+                    {navData.homepage}
+                  </Link>
+                  <Link onClick={() => setIsOpen(!isOpen)} to="about" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
+                    {navData.about}
+                  </Link>
+                  <Link onClick={() => setIsOpen(!isOpen)} to="projects" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
+                  {navData.projects}
+                  </Link>
+                  <Link onClick={() => setIsOpen(!isOpen)} to="contact" smooth={true} duration={500} className="text-blue-500 hover:bg-blue-50 hover:text-blue-700 dark:bg-warm-gray-800 dark:hover:bg-warm-gray-700 dark:text-white dark:hover:text-blue-50 block px-3 py-2 rounded-md text-base font-medium">
+                    {navData.contact}
+                  </Link>
+                </div>
               </div>
-            </div>}
+            </>
+          }
         </Transition>
       </nav>
     </div>

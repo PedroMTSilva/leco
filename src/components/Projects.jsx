@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Repo from '../api/getGithubRepo'
+import React from "react";
+import fetchRepositories from "../services/fetchRepositories"
 import data from '../config.json'
 
-const username = process.env.REACT_APP_GITHUB_USER
-const API = `https://api.github.com/users/${username}/repos`;
 const projectData = data.pt.projects
 
 const Projects = () => {
+
+  const repositories = fetchRepositories()
   
-  const [repositories, setRepositories] = useState([])
-  useEffect(() => {
-    fetch(API)
-    .then(response => response.json())
-    .then(data => setRepositories(data))
-  }, [])
   return (
     <div name='projects' className="w-full px-8 mb-16 pt-[10%] dark:bg-warm-gray-900">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
