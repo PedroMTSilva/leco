@@ -116,15 +116,13 @@ npm run deploy
 
 ```
 
-10. To change the thumbnail image:
+10. To change the some info, thumbnail image, profile pic and resume:
 
 - Navigate to the "public" folder.
 
-- There you will see "social-image.png".
+- There you will see "social-image.png", "resume.pdf", "leandrocorreia.png" and inside src/ you have "config.json".
 
-- Delete it.
-
-- Take a screenshot of your version and rename it "social-image.png" and place it there.
+- Do your version and rename your thumbnail as "social-image.png", your profile pic as "profile-pic.png", your resume as "resume.pdf" and change "config.json" as you think best.
 
 
 ## Contributing 🙋
