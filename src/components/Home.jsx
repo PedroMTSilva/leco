@@ -25,13 +25,13 @@ const Home = () => {
         </div>
       </div>
       {/* Social Media */}
-      <div className="hidden md:flex flex-col fixed right-0 top-[35%] z-10">
+      <div className="hidden md:flex flex-col fixed left-0 top-[35%] z-10">
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-warm-gray-900 dark:bg-warm-gray-700 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.github.url}><FaGithub size={24} className={"mr-4"}/>{socialMedia.github.text}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-600 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.facebook.url}><FaFacebook size={24} className={"mr-4"}/>{socialMedia.facebook.text}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-red-600 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.instagram.url}><FaInstagram size={24} className={"mr-4"}/>{socialMedia.instagram.text}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-blue-700 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.linkedin.url}><FaLinkedin size={24} className={"mr-4"}/>{socialMedia.linkedin.text}</a></li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium mr-[-110px] hover:ml-[-100px] duration-300 bg-gray-500 p-4 rounded-l-2xl'><a className='flex' href={socialMedia.email.url}><FaEnvelope size={24} className={"mr-4"}/>E-{socialMedia.email.text}</a></li>
+          <a className='flex' href={socialMedia.github.url}><li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium ml-[-100px] hover:ml-0 duration-300 bg-warm-gray-900 dark:bg-warm-gray-700 p-4 rounded-r-2xl'>{socialMedia.github.text}<FaGithub size={24} className={"mr-1"}/></li></a>
+          <a className='flex' href={socialMedia.facebook.url}><li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium ml-[-100px] hover:ml-0 duration-300 bg-blue-600 p-4 rounded-r-2xl'>{socialMedia.facebook.text}<FaFacebook size={24} className={"mr-1"}/></li></a>
+          <a className='flex' href={socialMedia.instagram.url}><li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium ml-[-100px] hover:ml-0 duration-300 bg-red-600 p-4 rounded-r-2xl'>{socialMedia.instagram.text}<FaInstagram size={24} className={"mr-1"}/></li></a>
+          <a className='flex' href={socialMedia.linkedin.url}><li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium ml-[-100px] hover:ml-0 duration-300 bg-blue-700 p-4 rounded-r-2xl'>{socialMedia.linkedin.text}<FaLinkedin size={24} className={"mr-1"}/></li></a>
+          <a className='flex' href={socialMedia.email.url}><li className='w-[160px] h-[60px] flex justify-between items-center text-white font-medium ml-[-100px] hover:ml-0 duration-300 bg-gray-500 p-4 rounded-r-2xl'>{socialMedia.email.text}<FaEnvelope size={24} className={"mr-1"}/></li></a>
         </ul>
       </div>
     </div>
