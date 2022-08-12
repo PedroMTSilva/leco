@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
   } = project;
 
   return (
-    <div className="bg-white hover:bg-gray-50 text-black dark:bg-warm-gray-600 dark:hover:bg-warm-gray-500 dark:text-white rounded-md shadow-md p-6">
+    <ProjectContent>
       <ProjectTitle full_name={full_name} />
       <ProjectDescription description={description} />
       <ProjectLanguages languages_url={languages_url} repo_url={repo_url} />
@@ -26,6 +26,14 @@ const ProjectCard = ({ project }) => {
       />
       <hr className="mb-4" />
       <ProjectButtons repo_url={repo_url} svn_url={svn_url} />
+    </ProjectContent>
+  );
+};
+
+const ProjectContent = ({ children }) => {
+  return (
+    <div className="bg-white hover:bg-gray-50 text-black dark:bg-warm-gray-600 dark:hover:bg-warm-gray-500 dark:text-white rounded-md shadow-md p-6">
+      {children}
     </div>
   );
 };

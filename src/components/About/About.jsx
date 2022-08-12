@@ -3,12 +3,13 @@ import { useState } from 'react'
 import 'flowbite';
 import { Tab } from '@headlessui/react'
 import data from '../../config.json'
+import { SectionStructure } from '../../components/SectionStructure'
 
 const aboutData = data.pt.about
 
 const About = () => {
   return (
-    <div name='about' className="w-full px-8 pt-[10%] mb-16 dark:bg-warm-gray-900">
+    <div name='' className="w-full px-8 pt-[10%] mb-16 dark:bg-warm-gray-900">
       <div className='flex flex-col justify-center items-center w-full h-auto'>
         {/* Image + Title + Text */}
         <div className="max-w-[1000px] w-full px-4 flex flex-row gap-2 mb-16">
@@ -55,7 +56,7 @@ function classNames(...classes) {
 }
 
 // headless ui tabs props
-function MyTabs() {
+const MyTabs = () => {
   let [skills] = useState(aboutData.skills)
 
   return (
@@ -97,7 +98,7 @@ function MyTabs() {
                         <div className={"bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full"} style={{width: post.progress}}></div>
                       </div>
                     </ul>
-                    {/* <a className={classNames('absolute inset-0 rounded-md', 'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2')} /> */}
+                    
                   </li>
                 ))}
               </ul>
