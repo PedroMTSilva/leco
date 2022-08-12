@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react';
 import {FaArrowUp} from 'react-icons/fa';
   
@@ -20,8 +19,6 @@ const ScrollButton = () =>{
     window.scrollTo({
       top: 0, 
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour
-         in place of 'smooth' */
     });
   };
   

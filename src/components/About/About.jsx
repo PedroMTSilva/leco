@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import 'flowbite';
 import { Tab } from '@headlessui/react'
-import data from '../config.json'
+import data from '../../config.json'
 
 const aboutData = data.pt.about
 

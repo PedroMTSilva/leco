@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useForm } from 'react-hook-form'
-import data from '../config.json'
-import sendEmail from '../services/sendEmail'
+import data from '../../config.json'
+import sendEmail from '../../services/sendEmail'
 
 const contactData = data.pt.contact
 
