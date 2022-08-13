@@ -11,7 +11,7 @@ const Projects = () => {
     <Section.Structure name="projects">
       <Section.Title title={projectData.title} />
       <Section.Content>
-        <Section.Content customClass={"grid lg:grid-cols-2 grid-cols-1 gap-8"}>
+        <Section.Content  customClass={"grid lg:grid-cols-2 grid-cols-1 gap-8"}>
           {repositories.length ? (
             repositories.map((repo) => (
               <ProjectCard key={repo.id} project={repo} />

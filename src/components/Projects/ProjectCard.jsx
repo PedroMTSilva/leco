@@ -32,7 +32,7 @@ const ProjectCard = ({ project }) => {
 
 const ProjectContent = ({ children }) => {
   return (
-    <div className="bg-white hover:bg-gray-50 text-black dark:bg-warm-gray-600 dark:hover:bg-warm-gray-500 dark:text-white rounded-md shadow-md p-6">
+    <div className="bg-white hover:bg-gray-50 text-black dark:bg-warm-gray-600 dark:hover:bg-warm-gray-500 dark:text-white flex-col inline-grid rounded-md shadow-md p-6">
       {children}
     </div>
   );
@@ -122,7 +122,7 @@ const ProjectFooter = ({ stargazers_count, pushed_at }) => {
 
 const ProjectButtons = ({ svn_url }) => {
   return (
-    <div className="grid grid-cols-2 gap-3 mt-4">
+    <div className="grid grid-cols-2 gap-3">
       <button className="rounded-md bg-blue-600 text-white p-2">
         <a
           href={svn_url + "/archive/refs/tags/v1.0.zip"}
