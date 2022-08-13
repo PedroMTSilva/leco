@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
+import axios from "axios";
 import data from "../../config.json";
 
 const projectData = data.pt.projects;

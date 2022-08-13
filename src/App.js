@@ -4,8 +4,9 @@ import Footer from './components/Footer';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import ScrollButton from './components/ScrollTopBtn';
+import DetailedProjects from './components/DetailedProjects/DetailedProjects';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Home />
         <About />
         <Projects />
+        <DetailedProjects />
         <Contact />
         <Footer />
         <ScrollButton />
