@@ -16,7 +16,7 @@ export const ContactForm = ({ form, handler }) => {
 
 const ContactBody = ({ children }) => {
   return (
-    <div className="max-w-[1000px] mx-auto w-full mt-16">
+    <div className="max-w-[1000px] mx-auto w-full">
       <div className="bg-white text-black dark:bg-warm-gray-700 dark:text-white rounded-md shadow-md p-4 text-left">
         {children}
       </div>
