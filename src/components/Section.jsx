@@ -7,7 +7,7 @@ export const Structure = ({ customClass, name, children }) => {
       className={
         customClass
           ? customClass
-          : "w-full px-8 mb-16 pt-[10%] dark:bg-warm-gray-900"
+          : "w-full px-8 pt-[15%] md:pt-[10%] pb-[10%] dark:bg-warm-gray-900 transition-all duration-300"
       }
     >
       {children}
