@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes color {
+/* @keyframes color {
   0%   { background: #ffffff; }
   20%  { background: #f7f7f7; }
   40%  { background: #f5f5f5; }
   60%  { background: #f5f5f5; }
   80%  { background: #f7f7f7; }
   100% { background: #ffffff; }
-}
+} */
 
 body {
-  background: white; /* Fallback */
-  animation: color 9s infinite linear;
+  background: rgb(245, 245, 245);
+  /* animation: color 9s infinite linear; */
   text-align: center;
   padding: 2em;
   padding: 0;

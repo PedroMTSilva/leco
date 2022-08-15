@@ -7,7 +7,7 @@ export const Structure = ({ customClass, name, children }) => {
       className={
         customClass
           ? customClass
-          : "w-full px-8 pt-[15%] md:pt-[10%] pb-[10%] dark:bg-warm-gray-900 transition-all duration-300"
+          : "w-full px-8 pt-[20%] md:pt-[10%] pb-[10%] dark:bg-warm-gray-900 transition-all duration-300"
       }
     >
       {children}
@@ -25,7 +25,7 @@ export const Title = ({ title }) => {
       <div className="flex flex-col justify-center items-center">
         <div className="basis-1/5"></div>
         <div className="basis-3/5">
-          <p className="dark:text-warm-gray-50 lg:text-8xl md:text-8xl sm:text-5xl text-3xl font-black text-center border-b-4 lg:border-b-8 md:border-b-8 border-yellow-400">
+          <p className="dark:text-warm-gray-50 lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-black text-center border-b-4 lg:border-b-8 md:border-b-8 border-yellow-400">
             {title}
           </p>
         </div>
@@ -52,7 +52,7 @@ export const TitlePicDivided = ({ pic, title, text }) => {
         <div className="max-w-[1000px] w-full px-4 flex flex-row mb-12">
           <div className="basis-1/5"></div>
           <div className="basis-3/5">
-            <p className="dark:text-warm-gray-50 lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-black text-center border-b-4 lg:border-b-8 md:border-b-8 border-yellow-400">
+            <p className="dark:text-warm-gray-50 lg:text-6xl md:text-6xl sm:text-5xl text-4xl font-black text-center border-b-4 lg:border-b-8 md:border-b-8 border-yellow-400">
               {title}
             </p>
           </div>
