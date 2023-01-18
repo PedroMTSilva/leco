@@ -2,11 +2,11 @@
 
 <p align="center">
 
-<h1 align="center">Leandro Correia Portfolio ✨</h1>
+<h1 align="center">Leandro Correia's Portfolio ✨</h1>
 
 <p align="center">
 
-This project take me one week to develop while learning for the first time Reactjs and Tailwind. Site URL:
+This project took me one week to develop while learning for the first time Reactjs and Tailwind. Here's the URL:
 
 <a href="https://leandroc0rreia.com">leandroc0rreia.com</a>
 </p>
@@ -37,7 +37,7 @@ Dependencies defined in package.json:
 - About
 	- Image
 	- Simple text about me
-	- Table with Technical and Soft Skill
+	- Table with Technical and Soft Skills
 	- Button to download my resume
 - Projects
 	- Recent projects (using GitHub API)
@@ -48,17 +48,17 @@ Dependencies defined in package.json:
 
 ## Sharing 💗
 
-Project is open source. Feel free to make your own version. All you need to do is to fork this repository
-Mark star ⭐ if you like the project.
+The project is currently open source. Feel free to make your own version. All you need to do is to fork this repository.
+Don't forget to leave a star ⭐ if you like it.
 
 ## Inspiration 💡
 
-This project takes inspiration on developers portfolio website.
-Thanks a lot [Hashir Shoaeb](https://hashirshoaeb.com/) and contributors who help on [home](https://github.com/hashirshoaeb/home) project.
+This project was inspired by a variety of developers' portfolio websites.
+Thanks a lot to [Hashir Shoaeb](https://hashirshoaeb.com/) and contributors who helped on the [home](https://github.com/hashirshoaeb/home) project.
 
 ## Prerequisites 🍪
 
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC and configure [React + Tailwind](https://tailwindcss.com/docs/guides/create-react-app). You should also own a GitHub account.
+You will need [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC and to configure [React + Tailwind](https://tailwindcss.com/docs/guides/create-react-app). You should also own a GitHub account.
 
 ## Setup And Deployment 🔧
 
@@ -72,13 +72,13 @@ git clone https://github.com/<your-username>/leco.git
 
 ```
 
-3. Open in editor and edit [src/info/config.js](./src/info/config.js) file.
+3. Open in editor and edit the [src/info/config.js](./src/info/config.js) file.
 
 4. Add your resume as <resume.pdf> in place of [src/info/resume.pdf](./src/info/)
 
 5. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
 
-6. Change URL in [package.json](./package.json) file:
+6. Change the URL in the [package.json](./package.json) file:
 
 ```json
 
@@ -88,7 +88,7 @@ git clone https://github.com/<your-username>/leco.git
 
 Or for deployment at custom domain, refer [create-react-app.dev](https://create-react-app.dev/docs/deployment/#step-1-add-homepage-to-packagejson)
 
-7. After editing run the following bash commands:
+7. After editing the file, run the following bash commands:
 
 ```bash
 
@@ -98,7 +98,7 @@ npm start
 
 ```
 
-8. To deploy website, run:
+8. To deploy the website, run:
 
 ```bash
 
@@ -108,7 +108,7 @@ npm run deploy
 
 ```
 
-9. Congrats your site is up and running. To see it live, visit:
+9. Congrats!! Your website is up and running. To see it live, visit:
 
 ```https
 
@@ -116,18 +116,18 @@ npm run deploy
 
 ```
 
-10. To change the some info, thumbnail image, profile pic and resume:
+10. If you want to change some of the info, thumbnail image, profile pic and resume, you can do the following:
 
 - Navigate to the "public" folder.
 
-- There you will see "social-image.png", "resume.pdf", "leandrocorreia.png" and inside src/ you have "config.json".
+- There you will see "social-image.png", "resume.pdf", "leandrocorreia.png" and, inside the "src/" directory, you have "config.json".
 
-- Do your version and rename your thumbnail as "social-image.png", your profile pic as "profile-pic.png", your resume as "resume.pdf" and change "config.json" as you think best.
+- Make your own version and rename your thumbnail as "social-image.png", your profile picture as "profile-pic.png", your resume as "resume.pdf" and change the "config.json" as you please.
 
 
 ## Contributing 🙋
 
-This project is in development. Means that feel free to help and give suggestions. Feel free to fork, use and maintain your own version.
+This project is in development. Feel free to fork, use and maintain your own version. I'm also open to recieving help and suggestions. 
 
 ## License ⚖️
 
